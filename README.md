@@ -14,7 +14,7 @@ Hardware limits shouldn’t block learning. Here you’ll find notebooks for eve
 This is Genralized Link, Replace folder name and notebook name at the end of link
 ```
 
-[https://colab.research.google.com/github/official-imvoiid/CollabAI-Hub/blob/main/](https://colab.research.google.com/github/official-imvoiid/CollabAI-Hub/blob/main/)<Folder>/<Notebook>.ipynb
+https://colab.research.google.com/github/official-imvoiid/CollabAI-Hub/blob/main/<Folder>/<Notebook>.ipynb
 
 ````
 
