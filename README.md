@@ -13,9 +13,7 @@ Hardware limits shouldn’t block learning. Here you’ll find notebooks for eve
 ## Open it in Colab:  
 This is Genralized Link, Replace folder name and notebook name at the end of link
 ```
-
 https://colab.research.google.com/github/official-imvoiid/CollabAI-Hub/blob/main/<Folder>/<Notebook>.ipynb
-
 ````
 
 ---
@@ -44,8 +42,7 @@ Want to share a notebook? Simply:
 
 1. Fork this repo
 2. Add a new folder + your notebook
-3. Duplicate the “Tools & Notebooks” block above
-4. Submit a pull request with a brief description
+3. Submit a pull request with a brief description
 
 ---
 
