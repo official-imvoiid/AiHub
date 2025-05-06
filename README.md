@@ -10,13 +10,8 @@ Hardware limits shouldn’t block learning. Here you’ll find notebooks for eve
 
 ---
 
-## 🧰 Tools & Notebooks
-
-For each tool you add, duplicate this block and fill in the name and path:
-
-- **<Tool Name>**  
-  A short one-line description.  
-  Open it in Colab:  
+## Open it in Colab:  
+This is Genralized Link, Replace folder name and notebook name at the end of link
 ```
 
 [https://colab.research.google.com/github/official-imvoiid/CollabAI-Hub/blob/main/](https://colab.research.google.com/github/official-imvoiid/CollabAI-Hub/blob/main/)<Folder>/<Notebook>.ipynb
