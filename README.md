@@ -43,6 +43,7 @@ Want to share a notebook? Simply:
 1. Fork this repo
 2. Add a new folder + your notebook
 3. Submit a pull request with a brief description
+4. Make Sure your code is optamized for Colab Free & does not need Colab Pro
 
 ---
 
