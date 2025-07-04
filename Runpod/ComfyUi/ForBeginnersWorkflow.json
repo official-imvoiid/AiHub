@@ -1,0 +1,723 @@
+{
+  "id": "89cbbecd-10c7-4fe6-ae28-5078159eb4cb",
+  "revision": 0,
+  "last_node_id": 39,
+  "last_link_id": 45,
+  "nodes": [
+    {
+      "id": 14,
+      "type": "CivitAI_Checkpoint_Loader",
+      "pos": [
+        -1198.9346923828125,
+        -3.1941640377044678
+      ],
+      "size": [
+        270,
+        194
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            33
+          ]
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            34
+          ]
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            27
+          ]
+        }
+      ],
+      "title": "CivitAI Checkpoint",
+      "properties": {
+        "cnr_id": "civitai_comfy_nodes",
+        "ver": "2a2ca4e05955ebbee32eaa269c2c20b4654e8910",
+        "Node name for S&R": "CivitAI_Checkpoint_Loader"
+      },
+      "widgets_values": [
+        "",
+        "none",
+        "",
+        4,
+        "models/checkpoints"
+      ]
+    },
+    {
+      "id": 24,
+      "type": "CivitAI_Lora_Loader",
+      "pos": [
+        -821.1878662109375,
+        38.298553466796875
+      ],
+      "size": [
+        270,
+        222
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 33
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 34
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            35
+          ]
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            36
+          ]
+        }
+      ],
+      "title": "CivitAI Lora",
+      "properties": {
+        "cnr_id": "civitai_comfy_nodes",
+        "ver": "2a2ca4e05955ebbee32eaa269c2c20b4654e8910",
+        "Node name for S&R": "CivitAI_Lora_Loader"
+      },
+      "widgets_values": [
+        "",
+        "none",
+        1,
+        1,
+        "",
+        4,
+        "models/loras"
+      ]
+    },
+    {
+      "id": 15,
+      "type": "CivitAI_Lora_Loader",
+      "pos": [
+        -474.2949523925781,
+        91.94734954833984
+      ],
+      "size": [
+        270,
+        222
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 35
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 36
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            28
+          ]
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            29,
+            30
+          ]
+        }
+      ],
+      "title": "CivitAI Lora",
+      "properties": {
+        "cnr_id": "civitai_comfy_nodes",
+        "ver": "2a2ca4e05955ebbee32eaa269c2c20b4654e8910",
+        "Node name for S&R": "CivitAI_Lora_Loader"
+      },
+      "widgets_values": [
+        "",
+        "none",
+        1,
+        1,
+        "",
+        4,
+        "models/loras"
+      ]
+    },
+    {
+      "id": 7,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -138.3140869140625,
+        237.64572143554688
+      ],
+      "size": [
+        425.27801513671875,
+        180.6060791015625
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "clip",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 29
+        }
+      ],
+      "outputs": [
+        {
+          "label": "CONDITIONING",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            6
+          ]
+        }
+      ],
+      "title": "Negative Prompt",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.18",
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "(worst quality, low quality:1.4), (bad anatomy), text, error, missing fingers, extra digit, fewer digits, cropped, jpeg artifacts, signature, watermark, username, blurry, deformed face"
+      ]
+    },
+    {
+      "id": 6,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -122.67454528808594,
+        -1.4535562992095947
+      ],
+      "size": [
+        422.84503173828125,
+        164.31304931640625
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "clip",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 30
+        }
+      ],
+      "outputs": [
+        {
+          "label": "CONDITIONING",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            4
+          ]
+        }
+      ],
+      "title": "Postive Prompt",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.18",
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 5,
+      "type": "EmptyLatentImage",
+      "pos": [
+        -135.27479553222656,
+        480.2605285644531
+      ],
+      "size": [
+        315,
+        106
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "LATENT",
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            2
+          ]
+        }
+      ],
+      "title": "Image Ratio/Size",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.18",
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        824,
+        1216,
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "type": "KSampler",
+      "pos": [
+        332.53900146484375,
+        143.21365356445312
+      ],
+      "size": [
+        315,
+        474
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "model",
+          "name": "model",
+          "type": "MODEL",
+          "link": 28
+        },
+        {
+          "label": "positive",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 4
+        },
+        {
+          "label": "negative",
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 6
+        },
+        {
+          "label": "latent_image",
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 2
+        }
+      ],
+      "outputs": [
+        {
+          "label": "LATENT",
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            7
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.18",
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        142082561194308,
+        "randomize",
+        27,
+        4,
+        "euler",
+        "karras",
+        1
+      ]
+    },
+    {
+      "id": 31,
+      "type": "ImageUpscaleWithModel",
+      "pos": [
+        696.4484252929688,
+        27.66368865966797
+      ],
+      "size": [
+        221.98202514648438,
+        46
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "upscale_model",
+          "type": "UPSCALE_MODEL",
+          "link": 42
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 43
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            44
+          ]
+        }
+      ],
+      "title": "Upscaler",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.43",
+        "Node name for S&R": "ImageUpscaleWithModel"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 8,
+      "type": "VAEDecode",
+      "pos": [
+        416.26007080078125,
+        46.32965087890625
+      ],
+      "size": [
+        210,
+        46
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "samples",
+          "name": "samples",
+          "type": "LATENT",
+          "link": 7
+        },
+        {
+          "label": "vae",
+          "name": "vae",
+          "type": "VAE",
+          "link": 27
+        }
+      ],
+      "outputs": [
+        {
+          "label": "IMAGE",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            43
+          ]
+        }
+      ],
+      "title": "VAE",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.18",
+        "Node name for S&R": "VAEDecode"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 9,
+      "type": "SaveImage",
+      "pos": [
+        1167.5599365234375,
+        -113.53804016113281
+      ],
+      "size": [
+        563.196533203125,
+        602.3435668945312
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "images",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 44
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.18",
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 30,
+      "type": "UpscaleModelLoader",
+      "pos": [
+        365.08489990234375,
+        -71.19988250732422
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "UPSCALE_MODEL",
+          "type": "UPSCALE_MODEL",
+          "links": [
+            42
+          ]
+        }
+      ],
+      "title": "Upscale Model",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.43",
+        "Node name for S&R": "UpscaleModelLoader"
+      },
+      "widgets_values": [
+        "4xUltrasharp_4xUltrasharpV10.pt"
+      ]
+    },
+    {
+      "id": 32,
+      "type": "MarkdownNote",
+      "pos": [
+        686.3171997070312,
+        186.86962890625
+      ],
+      "size": [
+        445.79913330078125,
+        179.84429931640625
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "NOTE",
+      "properties": {},
+      "widgets_values": [
+        "# AN UPSCALER + LORA MODEL Workflow\n\n* Uses Civitai + Api for Model and Lora Download\n* Hires Via Model Supported\n* Easy to use\n* Use Comfy Manager to download Upscale Model"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 39,
+      "type": "MarkdownNote",
+      "pos": [
+        -1254.0440673828125,
+        525.9149169921875
+      ],
+      "size": [
+        396.6259460449219,
+        164.3902130126953
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Civitai Models",
+      "properties": {},
+      "widgets_values": [
+        "Civitai Model Downloader\n========================\nResources:\n- Main Site: https://civitai.com/\n- API Key: https://civitai.com/user/account/\n- Display Settings: https://civitai.com/user/account/\n- AIR Format: Get from model card (example: 1209649@1362409)"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    }
+  ],
+  "links": [
+    [
+      2,
+      5,
+      0,
+      3,
+      3,
+      "LATENT"
+    ],
+    [
+      4,
+      6,
+      0,
+      3,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      6,
+      7,
+      0,
+      3,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      7,
+      3,
+      0,
+      8,
+      0,
+      "LATENT"
+    ],
+    [
+      27,
+      14,
+      2,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      28,
+      15,
+      0,
+      3,
+      0,
+      "MODEL"
+    ],
+    [
+      29,
+      15,
+      1,
+      7,
+      0,
+      "CLIP"
+    ],
+    [
+      30,
+      15,
+      1,
+      6,
+      0,
+      "CLIP"
+    ],
+    [
+      33,
+      14,
+      0,
+      24,
+      0,
+      "MODEL"
+    ],
+    [
+      34,
+      14,
+      1,
+      24,
+      1,
+      "CLIP"
+    ],
+    [
+      35,
+      24,
+      0,
+      15,
+      0,
+      "MODEL"
+    ],
+    [
+      36,
+      24,
+      1,
+      15,
+      1,
+      "CLIP"
+    ],
+    [
+      42,
+      30,
+      0,
+      31,
+      0,
+      "UPSCALE_MODEL"
+    ],
+    [
+      43,
+      8,
+      0,
+      31,
+      1,
+      "IMAGE"
+    ],
+    [
+      44,
+      31,
+      0,
+      9,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "Text2Image + Lora + Upscale (Workflow By Voiid)",
+      "bounding": [
+        -1321.6824951171875,
+        -448.2305603027344,
+        3205.178466796875,
+        1285.6756591796875
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.4290125561991367,
+      "offset": [
+        1923.946826329848,
+        889.1212159109458
+      ]
+    },
+    "frontendVersion": "1.23.4",
+    "node_versions": {
+      "comfy-core": "v0.3.9"
+    }
+  },
+  "version": 0.4
+}
