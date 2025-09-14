@@ -247,7 +247,7 @@
         "Node name for S&R": "KSampler"
       },
       "widgets_values": [
-        133924062038138,
+        376971976196222,
         "randomize",
         27,
         4,
@@ -378,49 +378,6 @@
       ],
       "color": "#432",
       "bgcolor": "#653"
-    },
-    {
-      "id": 7,
-      "type": "CLIPTextEncode",
-      "pos": [
-        -368.4143981933594,
-        358.62542724609375
-      ],
-      "size": [
-        820.4551391601562,
-        445.4346923828125
-      ],
-      "flags": {},
-      "order": 9,
-      "mode": 0,
-      "inputs": [
-        {
-          "label": "clip",
-          "name": "clip",
-          "type": "CLIP",
-          "link": 29
-        }
-      ],
-      "outputs": [
-        {
-          "label": "CONDITIONING",
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "slot_index": 0,
-          "links": [
-            6
-          ]
-        }
-      ],
-      "title": "NEGATIVE PROMPT",
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.18",
-        "Node name for S&R": "CLIPTextEncode"
-      },
-      "widgets_values": [
-        "score_6, score_5, score_4, ugly, bad anatomy, bad hands, bad feet, missing fingers, extra fingers, deformed, mutated, disfigured, distorted, blurry, out of focus, lowres, low quality, worst quality, jpeg artifacts, overexposed, underexposed, oversaturated, undersaturated, dull colors, incorrect perspective, wrong perspective, unrealistic proportions, glitch, noise, text, signature, watermark, username, logo, cropped, extra limbs, extra arms, extra legs, multiple heads, fused fingers, multiple bodies, wrong face, crossed eyes, asymmetrical eyes, strange face, anime style (if not desired), cartoonish (if not desired), 3d render (if not desired), plastic texture, doll, mannequin, toy, baby, child, animal (if not desired), mascot, furry (if not desired), nudity, nipples, sexual content, sexualized, erotic, pornographic, obscene, gore, blood, violence, weapons, fan art, clone, duplicates, unrealistic clothing, bad lighting, harsh shadows, color banding, chromatic aberration, bad composition, wrong anatomy, floating objects, disconnected limbs, unnatural poses, poorly drawn, smudged, low detail, artifacts, compression artifacts, bad hands, bad feet, ugly face, sad face, crying, angry face (if not desired), squinting, weird smile, missing teeth, extra teeth, missing ears, extra ears, missing eyes, extra eyes, long neck, short neck, weird body, unrealistic body, disproportionate body, small head, large head, stretched face, weird mouth, bad hair, messy hair, unkempt hair, unnatural hair, ugly hair, bad clothes, ripped clothes, plain background, empty background (if not desired)\n"
-      ]
     },
     {
       "id": 14,
@@ -648,6 +605,49 @@
         4,
         "models/loras"
       ]
+    },
+    {
+      "id": 7,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -368.4143981933594,
+        358.62542724609375
+      ],
+      "size": [
+        820.4551391601562,
+        445.4346923828125
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "clip",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 29
+        }
+      ],
+      "outputs": [
+        {
+          "label": "CONDITIONING",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            6
+          ]
+        }
+      ],
+      "title": "NEGATIVE PROMPT",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.18",
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "score_6, score_5, score_4, lowres, blurry, low quality, worst quality, bad anatomy, bad hands, bad feet, missing fingers, extra digits, deformed, mutated, distorted, wrong face, ugly face, crossed eyes, asymmetry, unrealistic proportions, extra limbs, multiple heads, cropped, artifacts, compression artifacts, glitch, noise, text, watermark, signature, logo, doll, mannequin, toy, child, animal, mascot, furry, nudity, sexual content, gore, violence, weapons, bad lighting, overexposed, underexposed, oversaturated, undersaturated, dull colors, plain background, empty background\n"
+      ]
     }
   ],
   "links": [
@@ -806,10 +806,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.6727499949325617,
+      "scale": 0.6115909044841474,
       "offset": [
-        512.1207868456944,
-        937.888297819353
+        1244.8950120253953,
+        166.97407431973656
       ]
     },
     "frontendVersion": "1.26.11",
