@@ -1,270 +1,39 @@
 {
   "id": "89cbbecd-10c7-4fe6-ae28-5078159eb4cb",
   "revision": 0,
-  "last_node_id": 39,
-  "last_link_id": 45,
+  "last_node_id": 43,
+  "last_link_id": 53,
   "nodes": [
     {
-      "id": 14,
-      "type": "CivitAI_Checkpoint_Loader",
+      "id": 39,
+      "type": "MarkdownNote",
       "pos": [
-        -1198.9346923828125,
-        -3.1941640377044678
+        -1749.510009765625,
+        611.3104858398438
       ],
       "size": [
-        270,
-        194
+        393.05224609375,
+        160.81649780273438
       ],
       "flags": {},
       "order": 0,
       "mode": 0,
       "inputs": [],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            33
-          ]
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            34
-          ]
-        },
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [
-            27
-          ]
-        }
-      ],
-      "title": "CivitAI Checkpoint",
-      "properties": {
-        "cnr_id": "civitai_comfy_nodes",
-        "ver": "2a2ca4e05955ebbee32eaa269c2c20b4654e8910",
-        "Node name for S&R": "CivitAI_Checkpoint_Loader"
-      },
+      "outputs": [],
+      "title": "READ ME",
+      "properties": {},
       "widgets_values": [
-        "",
-        "none",
-        "",
-        4,
-        "models/checkpoints"
-      ]
-    },
-    {
-      "id": 24,
-      "type": "CivitAI_Lora_Loader",
-      "pos": [
-        -821.1878662109375,
-        38.298553466796875
+        "Civitai Model Downloader\n========================\nResources:\n- Main Site: https://civitai.com/\n- API Key: https://civitai.com/user/account/\n- Display Settings: https://civitai.com/user/account/\n- AIR Format: Get from model card (example: 1209649@1362409)"
       ],
-      "size": [
-        270,
-        222
-      ],
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 33
-        },
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 34
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            35
-          ]
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            36
-          ]
-        }
-      ],
-      "title": "CivitAI Lora",
-      "properties": {
-        "cnr_id": "civitai_comfy_nodes",
-        "ver": "2a2ca4e05955ebbee32eaa269c2c20b4654e8910",
-        "Node name for S&R": "CivitAI_Lora_Loader"
-      },
-      "widgets_values": [
-        "",
-        "none",
-        1,
-        1,
-        "",
-        4,
-        "models/loras"
-      ]
-    },
-    {
-      "id": 15,
-      "type": "CivitAI_Lora_Loader",
-      "pos": [
-        -474.2949523925781,
-        91.94734954833984
-      ],
-      "size": [
-        270,
-        222
-      ],
-      "flags": {},
-      "order": 6,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 35
-        },
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 36
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            28
-          ]
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            29,
-            30
-          ]
-        }
-      ],
-      "title": "CivitAI Lora",
-      "properties": {
-        "cnr_id": "civitai_comfy_nodes",
-        "ver": "2a2ca4e05955ebbee32eaa269c2c20b4654e8910",
-        "Node name for S&R": "CivitAI_Lora_Loader"
-      },
-      "widgets_values": [
-        "",
-        "none",
-        1,
-        1,
-        "",
-        4,
-        "models/loras"
-      ]
-    },
-    {
-      "id": 7,
-      "type": "CLIPTextEncode",
-      "pos": [
-        -138.3140869140625,
-        237.64572143554688
-      ],
-      "size": [
-        425.27801513671875,
-        180.6060791015625
-      ],
-      "flags": {},
-      "order": 7,
-      "mode": 0,
-      "inputs": [
-        {
-          "label": "clip",
-          "name": "clip",
-          "type": "CLIP",
-          "link": 29
-        }
-      ],
-      "outputs": [
-        {
-          "label": "CONDITIONING",
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "slot_index": 0,
-          "links": [
-            6
-          ]
-        }
-      ],
-      "title": "Negative Prompt",
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.18",
-        "Node name for S&R": "CLIPTextEncode"
-      },
-      "widgets_values": [
-        "(worst quality, low quality:1.4), (bad anatomy), text, error, missing fingers, extra digit, fewer digits, cropped, jpeg artifacts, signature, watermark, username, blurry, deformed face"
-      ]
-    },
-    {
-      "id": 6,
-      "type": "CLIPTextEncode",
-      "pos": [
-        -122.67454528808594,
-        -1.4535562992095947
-      ],
-      "size": [
-        422.84503173828125,
-        164.31304931640625
-      ],
-      "flags": {},
-      "order": 8,
-      "mode": 0,
-      "inputs": [
-        {
-          "label": "clip",
-          "name": "clip",
-          "type": "CLIP",
-          "link": 30
-        }
-      ],
-      "outputs": [
-        {
-          "label": "CONDITIONING",
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "slot_index": 0,
-          "links": [
-            4
-          ]
-        }
-      ],
-      "title": "Postive Prompt",
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.18",
-        "Node name for S&R": "CLIPTextEncode"
-      },
-      "widgets_values": [
-        ""
-      ]
+      "color": "#432",
+      "bgcolor": "#653"
     },
     {
       "id": 5,
       "type": "EmptyLatentImage",
       "pos": [
-        -135.27479553222656,
-        480.2605285644531
+        11.792475700378418,
+        866.000244140625
       ],
       "size": [
         315,
@@ -285,7 +54,7 @@
           ]
         }
       ],
-      "title": "Image Ratio/Size",
+      "title": "IMAGE SIZE",
       "properties": {
         "cnr_id": "comfy-core",
         "ver": "0.3.18",
@@ -298,18 +67,141 @@
       ]
     },
     {
+      "id": 30,
+      "type": "UpscaleModelLoader",
+      "pos": [
+        561.6302490234375,
+        -636.6524047851562
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "UPSCALE_MODEL",
+          "type": "UPSCALE_MODEL",
+          "links": [
+            42
+          ]
+        }
+      ],
+      "title": "UPSCALE",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.43",
+        "Node name for S&R": "UpscaleModelLoader"
+      },
+      "widgets_values": [
+        "4xUltrasharp_4xUltrasharpV10.pt"
+      ]
+    },
+    {
+      "id": 6,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -367.7848205566406,
+        -279.1835632324219
+      ],
+      "size": [
+        827.0486450195312,
+        587.5194091796875
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "clip",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 30
+        }
+      ],
+      "outputs": [
+        {
+          "label": "CONDITIONING",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            4
+          ]
+        }
+      ],
+      "title": "POSTIVE PROMPT",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.18",
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 8,
+      "type": "VAEDecode",
+      "pos": [
+        460.03961181640625,
+        -410.4770202636719
+      ],
+      "size": [
+        210,
+        46
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "samples",
+          "name": "samples",
+          "type": "LATENT",
+          "link": 7
+        },
+        {
+          "label": "vae",
+          "name": "vae",
+          "type": "VAE",
+          "link": 27
+        }
+      ],
+      "outputs": [
+        {
+          "label": "IMAGE",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            43
+          ]
+        }
+      ],
+      "title": "VAE",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.18",
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
       "id": 3,
       "type": "KSampler",
       "pos": [
-        332.53900146484375,
-        143.21365356445312
+        612.6141967773438,
+        -27.889633178710938
       ],
       "size": [
-        315,
-        474
+        410.7568054199219,
+        531.4540405273438
       ],
       "flags": {},
-      "order": 9,
+      "order": 11,
       "mode": 0,
       "inputs": [
         {
@@ -348,18 +240,19 @@
           ]
         }
       ],
+      "title": "KSAMPLER",
       "properties": {
         "cnr_id": "comfy-core",
         "ver": "0.3.18",
         "Node name for S&R": "KSampler"
       },
       "widgets_values": [
-        142082561194308,
+        133924062038138,
         "randomize",
         27,
         4,
         "euler",
-        "karras",
+        "simple",
         1
       ]
     },
@@ -367,15 +260,15 @@
       "id": 31,
       "type": "ImageUpscaleWithModel",
       "pos": [
-        696.4484252929688,
-        27.66368865966797
+        899.5797119140625,
+        -286.0915222167969
       ],
       "size": [
         221.98202514648438,
         46
       ],
       "flags": {},
-      "order": 11,
+      "order": 13,
       "mode": 0,
       "inputs": [
         {
@@ -398,133 +291,19 @@
           ]
         }
       ],
-      "title": "Upscaler",
+      "title": "UPSCALE",
       "properties": {
         "cnr_id": "comfy-core",
         "ver": "0.3.43",
         "Node name for S&R": "ImageUpscaleWithModel"
-      },
-      "widgets_values": []
-    },
-    {
-      "id": 8,
-      "type": "VAEDecode",
-      "pos": [
-        416.26007080078125,
-        46.32965087890625
-      ],
-      "size": [
-        210,
-        46
-      ],
-      "flags": {},
-      "order": 10,
-      "mode": 0,
-      "inputs": [
-        {
-          "label": "samples",
-          "name": "samples",
-          "type": "LATENT",
-          "link": 7
-        },
-        {
-          "label": "vae",
-          "name": "vae",
-          "type": "VAE",
-          "link": 27
-        }
-      ],
-      "outputs": [
-        {
-          "label": "IMAGE",
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "slot_index": 0,
-          "links": [
-            43
-          ]
-        }
-      ],
-      "title": "VAE",
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.18",
-        "Node name for S&R": "VAEDecode"
-      },
-      "widgets_values": []
-    },
-    {
-      "id": 9,
-      "type": "SaveImage",
-      "pos": [
-        1167.5599365234375,
-        -113.53804016113281
-      ],
-      "size": [
-        563.196533203125,
-        602.3435668945312
-      ],
-      "flags": {},
-      "order": 12,
-      "mode": 0,
-      "inputs": [
-        {
-          "label": "images",
-          "name": "images",
-          "type": "IMAGE",
-          "link": 44
-        }
-      ],
-      "outputs": [],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.18",
-        "Node name for S&R": "SaveImage"
-      },
-      "widgets_values": [
-        ""
-      ]
-    },
-    {
-      "id": 30,
-      "type": "UpscaleModelLoader",
-      "pos": [
-        365.08489990234375,
-        -71.19988250732422
-      ],
-      "size": [
-        270,
-        58
-      ],
-      "flags": {},
-      "order": 2,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "UPSCALE_MODEL",
-          "type": "UPSCALE_MODEL",
-          "links": [
-            42
-          ]
-        }
-      ],
-      "title": "Upscale Model",
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.43",
-        "Node name for S&R": "UpscaleModelLoader"
-      },
-      "widgets_values": [
-        "4xUltrasharp_4xUltrasharpV10.pt"
-      ]
+      }
     },
     {
       "id": 32,
       "type": "MarkdownNote",
       "pos": [
-        686.3171997070312,
-        186.86962890625
+        609.861328125,
+        617.4937133789062
       ],
       "size": [
         445.79913330078125,
@@ -544,28 +323,331 @@
       "bgcolor": "#653"
     },
     {
-      "id": 39,
-      "type": "MarkdownNote",
+      "id": 9,
+      "type": "SaveImage",
       "pos": [
-        -1254.0440673828125,
-        525.9149169921875
+        1246.9034423828125,
+        -381.3573913574219
       ],
       "size": [
-        396.6259460449219,
-        164.3902130126953
+        718.6458129882812,
+        782.1669921875
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "images",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 44
+        }
+      ],
+      "outputs": [],
+      "title": "IMAGE",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.18",
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "IMAGE"
+      ]
+    },
+    {
+      "id": 42,
+      "type": "Note",
+      "pos": [
+        -337.83502197265625,
+        -660.0726318359375
+      ],
+      "size": [
+        690.388671875,
+        226.3345489501953
       ],
       "flags": {},
       "order": 4,
       "mode": 0,
       "inputs": [],
       "outputs": [],
-      "title": "Civitai Models",
+      "title": "Next Prompt",
       "properties": {},
       "widgets_values": [
-        "Civitai Model Downloader\n========================\nResources:\n- Main Site: https://civitai.com/\n- API Key: https://civitai.com/user/account/\n- Display Settings: https://civitai.com/user/account/\n- AIR Format: Get from model card (example: 1209649@1362409)"
+        ""
       ],
       "color": "#432",
       "bgcolor": "#653"
+    },
+    {
+      "id": 7,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -368.4143981933594,
+        358.62542724609375
+      ],
+      "size": [
+        820.4551391601562,
+        445.4346923828125
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "clip",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 29
+        }
+      ],
+      "outputs": [
+        {
+          "label": "CONDITIONING",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            6
+          ]
+        }
+      ],
+      "title": "NEGATIVE PROMPT",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.18",
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "score_6, score_5, score_4, ugly, bad anatomy, bad hands, bad feet, missing fingers, extra fingers, deformed, mutated, disfigured, distorted, blurry, out of focus, lowres, low quality, worst quality, jpeg artifacts, overexposed, underexposed, oversaturated, undersaturated, dull colors, incorrect perspective, wrong perspective, unrealistic proportions, glitch, noise, text, signature, watermark, username, logo, cropped, extra limbs, extra arms, extra legs, multiple heads, fused fingers, multiple bodies, wrong face, crossed eyes, asymmetrical eyes, strange face, anime style (if not desired), cartoonish (if not desired), 3d render (if not desired), plastic texture, doll, mannequin, toy, baby, child, animal (if not desired), mascot, furry (if not desired), nudity, nipples, sexual content, sexualized, erotic, pornographic, obscene, gore, blood, violence, weapons, fan art, clone, duplicates, unrealistic clothing, bad lighting, harsh shadows, color banding, chromatic aberration, bad composition, wrong anatomy, floating objects, disconnected limbs, unnatural poses, poorly drawn, smudged, low detail, artifacts, compression artifacts, bad hands, bad feet, ugly face, sad face, crying, angry face (if not desired), squinting, weird smile, missing teeth, extra teeth, missing ears, extra ears, missing eyes, extra eyes, long neck, short neck, weird body, unrealistic body, disproportionate body, small head, large head, stretched face, weird mouth, bad hair, messy hair, unkempt hair, unnatural hair, ugly hair, bad clothes, ripped clothes, plain background, empty background (if not desired)\n"
+      ]
+    },
+    {
+      "id": 14,
+      "type": "CivitAI_Checkpoint_Loader",
+      "pos": [
+        -1830.5413818359375,
+        -596.975341796875
+      ],
+      "size": [
+        270,
+        194
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            50
+          ]
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            51
+          ]
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            27
+          ]
+        }
+      ],
+      "title": "CHECKPOINT",
+      "properties": {
+        "cnr_id": "civitai_comfy_nodes",
+        "ver": "2a2ca4e05955ebbee32eaa269c2c20b4654e8910",
+        "Node name for S&R": "CivitAI_Checkpoint_Loader"
+      },
+      "widgets_values": [
+        "",
+        "none",
+        "",
+        4,
+        "models/checkpoints"
+      ]
+    },
+    {
+      "id": 43,
+      "type": "CivitAI_Lora_Loader",
+      "pos": [
+        -1470.5421142578125,
+        -383.0662841796875
+      ],
+      "size": [
+        270,
+        222
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 50
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 51
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            52
+          ]
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            53
+          ]
+        }
+      ],
+      "title": "STYLE",
+      "properties": {
+        "cnr_id": "civitai_comfy_nodes",
+        "ver": "2a2ca4e05955ebbee32eaa269c2c20b4654e8910",
+        "Node name for S&R": "CivitAI_Lora_Loader"
+      },
+      "widgets_values": [
+        "",
+        "none",
+        1,
+        1,
+        "",
+        4,
+        "models/loras"
+      ]
+    },
+    {
+      "id": 24,
+      "type": "CivitAI_Lora_Loader",
+      "pos": [
+        -1112.0635986328125,
+        -120.7258071899414
+      ],
+      "size": [
+        270,
+        222
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 52
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 53
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            35
+          ]
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            36
+          ]
+        }
+      ],
+      "title": "ADD EXTRA LORA",
+      "properties": {
+        "cnr_id": "civitai_comfy_nodes",
+        "ver": "2a2ca4e05955ebbee32eaa269c2c20b4654e8910",
+        "Node name for S&R": "CivitAI_Lora_Loader"
+      },
+      "widgets_values": [
+        "",
+        "none",
+        1,
+        1,
+        "",
+        4,
+        "models/loras"
+      ]
+    },
+    {
+      "id": 15,
+      "type": "CivitAI_Lora_Loader",
+      "pos": [
+        -756.9906005859375,
+        159.31288146972656
+      ],
+      "size": [
+        270,
+        222
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 35
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 36
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            28
+          ]
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            29,
+            30
+          ]
+        }
+      ],
+      "title": "CHARECTOR LORA",
+      "properties": {
+        "cnr_id": "civitai_comfy_nodes",
+        "ver": "2a2ca4e05955ebbee32eaa269c2c20b4654e8910",
+        "Node name for S&R": "CivitAI_Lora_Loader"
+      },
+      "widgets_values": [
+        "",
+        "none",
+        1,
+        1,
+        "",
+        4,
+        "models/loras"
+      ]
     }
   ],
   "links": [
@@ -634,22 +716,6 @@
       "CLIP"
     ],
     [
-      33,
-      14,
-      0,
-      24,
-      0,
-      "MODEL"
-    ],
-    [
-      34,
-      14,
-      1,
-      24,
-      1,
-      "CLIP"
-    ],
-    [
       35,
       24,
       0,
@@ -688,6 +754,38 @@
       9,
       0,
       "IMAGE"
+    ],
+    [
+      50,
+      14,
+      0,
+      43,
+      0,
+      "MODEL"
+    ],
+    [
+      51,
+      14,
+      1,
+      43,
+      1,
+      "CLIP"
+    ],
+    [
+      52,
+      43,
+      0,
+      24,
+      0,
+      "MODEL"
+    ],
+    [
+      53,
+      43,
+      1,
+      24,
+      1,
+      "CLIP"
     ]
   ],
   "groups": [
@@ -695,10 +793,10 @@
       "id": 1,
       "title": "Text2Image + Lora + Upscale (Workflow By Voiid)",
       "bounding": [
-        -1321.6824951171875,
-        -448.2305603027344,
-        3205.178466796875,
-        1285.6756591796875
+        -1905.7249755859375,
+        -818.9742431640625,
+        3912.236083984375,
+        1837.4073486328125
       ],
       "color": "#3f789e",
       "font_size": 24,
@@ -708,13 +806,13 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.4290125561991367,
+      "scale": 0.6727499949325617,
       "offset": [
-        1923.946826329848,
-        889.1212159109458
+        512.1207868456944,
+        937.888297819353
       ]
     },
-    "frontendVersion": "1.23.4",
+    "frontendVersion": "1.26.11",
     "node_versions": {
       "comfy-core": "v0.3.9"
     }
